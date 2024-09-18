@@ -8,7 +8,7 @@ import traceback
 import numpy as np
 import argparse
 
-tokenizer = AutoTokenizer.from_pretrained("THUDM/LongWriter-glm4-9b", trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained("/mnt/ceph/develop/jiawei/model_checkpoint/LongWriter-glm4-9b", trust_remote_code=True)
 max_length = 32768
 PAD_ID = tokenizer.get_command("[MASK]")
 EOS_ID = tokenizer.eos_token_id

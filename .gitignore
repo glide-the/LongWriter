@@ -2,3 +2,8 @@
 *.DS_Store
 *.idea/
 dataset
+**/wandb
+**/data
+**/multiprocess_data
+__pycache__
+*.jsonl

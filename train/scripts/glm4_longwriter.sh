@@ -1,7 +1,8 @@
 export 'PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32'
+export PATH=/usr/local/cuda/bin:$PATH
 
-deepspeed --include localhost:0,1,2,3,4,5,6,7 main.py \
---model_name_or_path THUDM/glm-4-9b \
+deepspeed --include localhost:0 main.py \
+--model_name_or_path /mnt/ceph/develop/jiawei/model_checkpoint/LongWriter-glm4-9b \
 --train_file ./data/glm4/longwriter \
 --output_dir ./output/glm4/longwriter \
 --num_train_epochs 4 \
